@@ -11,6 +11,10 @@ while true; do
     #
     # NOT IMPLEMENTED
     #
+    ping -c 5 192.168.1.10 >> /usr/share/nginx/html/results.txt
+    ping -c 5 192.168.1.11 >> /usr/share/nginx/html/results.txt
+    ping -c 5 192.168.2.10 >> /usr/share/nginx/html/results.txt
+    ping -c 5 192.168.2.11 >> /usr/share/nginx/html/results.txt
 
     sleep 60
 done
