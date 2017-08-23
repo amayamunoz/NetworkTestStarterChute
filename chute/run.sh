@@ -14,6 +14,8 @@ while true; do
     echo "Network interfaces:" > /usr/share/nginx/html/results.txt
     ifconfig >> /usr/share/nginx/html/results.txt
     
+    tc qdisc add dev eth0 root netem delay 25ms
+    
     echo "Queue setup:" >> /usr/share/nginx/html/results.txt
     tc qdisc show >> /usr/share/nginx/html/results.txt
 
