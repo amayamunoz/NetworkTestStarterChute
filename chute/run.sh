@@ -11,6 +11,14 @@ while true; do
     #
     # NOT IMPLEMENTED
     #
+    echo "Network interfaces:" > /usr/share/nginx/html/results.txt
+    ifconfig >> /usr/share/nginx/html/results.txt
+    
+    echo "Queue setup:" >> /usr/share/nginx/html/results.txt
+    tc qdisc show >> /usr/share/nginx/html/results.txt
+
+    echo "Test results:" >> /usr/share/nginx/html/results.txt
+
     ping -c 5 192.168.1.10 >> /usr/share/nginx/html/results.txt
     ping -c 5 192.168.1.11 >> /usr/share/nginx/html/results.txt
     ping -c 5 192.168.2.10 >> /usr/share/nginx/html/results.txt
